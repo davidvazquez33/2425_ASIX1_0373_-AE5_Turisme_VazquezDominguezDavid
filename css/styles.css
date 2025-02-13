@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: url('../img/bandera.png') repeat;
+    background-size: 25vw 17.5vh; 
+    color: white;
+    text-shadow: black 0.3vw 0.3vw 0.3vw; 
+    padding: 3vh 0; 
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90vw; 
+    margin: 2vh auto;
+    padding: 2vh;
+}
+
+.col2, .col3 {
+    flex: 1;
+    padding: 4vh;
+    margin: 2vh;
+    background: white;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+    max-width: 37.5%;
+}
+
+.col1 {
+    flex: 1;
+    padding: 4vh;
+    margin: 2vh;
+    background: white;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+    max-width: 15%;
+}
+
+.galeria {
+    display: grid;
+    gap: 2vw; 
+    padding: 3vh; 
+}
+
+.galeria img {
+    width: 100%;
+    height: 25vh; 
+    object-fit: cover; 
+    border-radius: 1vw; 
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; /*Para que la animación del ratón vaya bien y no sea como un tirón*/
+}
+
+.mapa {
+    width: 90%;
+    height: 25vh; 
+    border-radius: 1vw;
+    object-fit: cover; 
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); 
+
+}
+nav {
+    display: flex;
+    flex-direction: column; /*Para que no se me pongan los botones uno al lado del otro*/
+}
+nav a {
+    color: #fff; 
+    background-color: #4CAF50; 
+    padding: 14px 20px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    margin: 10px 0;
+    transition: background-color 0.3s, color 0.3s; /*Para que la animación del ratón vaya bien y no sea como un tirón*/
+}
+
+/*animaciónes de cuando pasamos el ratón por encima*/
+
+.galeria img:hover {
+    transform: scale(1.05); /*que se haga un poco más grande la img*/
+
+}
+
+nav a:hover {
+    background-color: #45a049; 
+    color: #000; 
+}
