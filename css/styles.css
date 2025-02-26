@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Fira Code', monospace;
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
+    font-size: 1.90vh;
 }
 
 header {
@@ -13,12 +18,18 @@ header {
     padding: 3vh 0; 
 }
 
-
 main {
     display: flex;
     justify-content: space-between;
-    max-width: 90vw; 
-    margin: 2vh auto;
+    max-width: 100vw; 
+    padding: 2vh;
+}
+
+.galeriacontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100vw; 
     padding: 2vh;
 }
 
@@ -44,8 +55,10 @@ main {
 
 .galeria {
     display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
     gap: 2vw; 
     padding: 3vh; 
+    width: 100%; /* Ocupa todo el ancho del contenedor */
 }
 
 .galeria img {
@@ -54,7 +67,7 @@ main {
     object-fit: cover; 
     border-radius: 1vw; 
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease; /*Para que la animación del ratón vaya bien y no sea como un tirón*/
+    transition: transform 0.3s ease; /* Para que la animación del ratón vaya bien y no sea como un tirón */
 }
 
 .mapa {
@@ -63,31 +76,68 @@ main {
     border-radius: 1vw;
     object-fit: cover; 
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); 
-
 }
+
 nav {
     display: flex;
-    flex-direction: column; /*Para que no se me pongan los botones uno al lado del otro*/
+    flex-direction: column; /* Para que no se me pongan los botones uno al lado del otro */
 }
+
 nav a {
-    color: #fff; 
-    background-color: #4CAF50; 
+    color: #faffb7; 
+    background-color: #ff6a6a; 
     padding: 14px 20px; 
     text-decoration: none; 
     font-weight: bold; 
     border-radius: 4px; 
     margin: 10px 0;
-    transition: background-color 0.3s, color 0.3s; /*Para que la animación del ratón vaya bien y no sea como un tirón*/
+    transition: transform 0.3s ease; /* Para que la animación del ratón vaya bien y no sea como un tirón */
 }
 
-/*animaciónes de cuando pasamos el ratón por encima*/
+#video10 {
+    width: 90%;
+    height: 25vh;
+    border-radius: 1vw;
+}
+.noticia {
+    padding: 2vh;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+    background-color: white;
+    margin-bottom: 2vh; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición */
+}
+
+.noticia img {
+    width: 60vh; 
+    height: 30vh; 
+    object-fit: cover;
+    border-radius: 1vw;
+    transition: transform 0.3s ease;
+}
+
+
+/* Animaciones de cuando pasamos el ratón por encima */
 
 .galeria img:hover {
-    transform: scale(1.05); /*que se haga un poco más grande la img*/
-
+    transform: scale(1.05); /* Que se haga un poco más grande la img */
 }
 
 nav a:hover {
-    background-color: #45a049; 
-    color: #000; 
+    background-color: #ff0000; 
+    color: #fff700; 
+    transform: scale(1.05);
 }
+
+.noticia img:hover {
+    transform: scale(1.05); /* Que se haga un poco más grande la img */
+}
+
+.noticia:hover {
+    transform: scale(1.05); /* Escalar al pasar el ratón */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+}
+
+
+
